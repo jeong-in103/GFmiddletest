@@ -29,6 +29,8 @@ bool Game::init(const char *title, int xpos, int ypos, int width, int height, in
 
   SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/rider.bmp");
 
+  m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface);
+  
   SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
 
   m_sourceRectangle.x = 0;
