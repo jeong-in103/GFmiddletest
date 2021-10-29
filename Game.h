@@ -1,8 +1,8 @@
 #ifndef __Game__
 #define __Game__
 
-//#include "SDL.h"
-#include "Player.h"
+#include "GameObject.h"
+#include <vector>
 
 class Game 
 {
@@ -19,8 +19,7 @@ private:
   SDL_Window* m_pWindow;
   SDL_Renderer* m_pRenderer;
 
-  GameObject m_go;
-  Player m_player;
+  std::vector<GameObject*> m_gameObjects;
   
   bool m_bRunning;
 };
